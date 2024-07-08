@@ -10,6 +10,7 @@ import PrevCount from "@/components/lessons/PrevCount";
 import ToggleVisibility from "@/components/lessons/ToggleVisibility";
 import Typography from "@/components/lessons/Typography";
 import Performance from "@/components/lessons/Performance";
+import Redux from "@/components/lessons/Redux";
 
 export default function Home() {
     // const domain = "https://reactwp.jeffandony.com";
@@ -53,12 +54,13 @@ export default function Home() {
     return (
         <main className="flex flex-col gap-4 p-6">
             <div className="flex flex-col gap-6">
-                <Performance />
-                {/* <FocusInput />
+                <FocusInput />
                 <PrevCount />
                 <ToggleVisibility />
                 <ShoppingCart />
-                <WizardStepper /> */}
+                <WizardStepper />
+                {/* <Performance /> */}
+                <Redux />
             </div>
         </main>
     );

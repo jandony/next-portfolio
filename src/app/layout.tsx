@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 // import LeftSidebar from "@/components/globals/left-sidebar";
 import Header from "@/components/globals/header";
+import ReduxProvider from "@/app/ReduxProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,12 +20,14 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${inter.className} bg-slate-900 text-white/50`}>
-                <Header />
-                <div className="relative min-h-screen">
-                    <div className="relative container min-h-screen z-10">
-                        {children}
+                <ReduxProvider>
+                    <Header />
+                    <div className="relative min-h-screen">
+                        <div className="relative container min-h-screen z-10">
+                            {children}
+                        </div>
                     </div>
-                </div>
+                </ReduxProvider>
             </body>
         </html>
     );
