@@ -1,5 +1,3 @@
-import { Suspense } from "react";
-
 interface Post {
     title: {
         rendered: string;
