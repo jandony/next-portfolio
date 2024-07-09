@@ -47,7 +47,7 @@ export default function ReactHookForm() {
     }
 
     return (
-        <div className="flex flex-col justify-center gap-2 my-2 border p-4">
+        <div className="flex flex-col justify-center gap-2 my-2 border p-8">
             <h3 className="text-3xl text-white">Basic Form</h3>
             <p>(React Hook Form)</p>
 

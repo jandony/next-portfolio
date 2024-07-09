@@ -4,7 +4,7 @@
 
 export default function Typography() {
     return (
-        <div className="border p-4">
+        <div className="border p-8">
             <h3 className="text-3xl text-white">Typography</h3>
             <h1 className="text-6xl">Header 1</h1>
             <h2 className="text-4xl">Header 2</h2>

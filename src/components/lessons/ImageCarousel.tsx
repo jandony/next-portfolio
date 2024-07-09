@@ -42,7 +42,7 @@ export default function ImageCarousel() {
             <label className="w-full">Lesson: DOM Minipulation, managing transitions, animations, and auto-play features.</label>
 
             <div className="border-2 border-gray-600 w-full relative overflow-hidden">
-                <div className="flex relative h-[500px] w-full" ref={carouselRef}>
+                <div className="flex relative w-full aspect-video" ref={carouselRef}>
                     <Image src={`${images[currentIndex]}`} alt={`Slide ${currentIndex}`} height={274} width={411} className={`w-full h-auto object-cover transition-all duration-500 ${!startTransition ? 'scale-100 opacity-100' : 'mr-10 scale-95 opacity-0'}`} />
                 </div>
                 <div className="flex justify-between items-center gap-4 p-2 bg-gray-600 w-full absolute bottom-0">

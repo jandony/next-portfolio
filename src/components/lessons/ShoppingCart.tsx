@@ -66,7 +66,7 @@ export default function ShoppingCart() {
     }, [state]);
 
     return (
-        <div className="flex flex-col gap-2 border p-4">
+        <div className="flex flex-col gap-2 border p-8">
             <h3 className="text-3xl text-white">Shopping Cart</h3>
             <p>(useReducer hook)</p>
 

@@ -85,7 +85,7 @@ export default function WizardStepper() {
             <h3 className="text-3xl text-white">useReducer Form</h3>
             <p>(useReducer hook)</p>
 
-            <div className="bg-slate-800 p-4 my-3 min-h-[500px]">
+            <div className="bg-slate-800 p-8 my-3 min-h-[500px]">
                 <p className="text-right">Step ({state.currentStep}/3)</p>
                 {state.currentStep === 1 && (
                     <Step1 data={state.steps[1].data} onDataChange={handleDataChange} />
