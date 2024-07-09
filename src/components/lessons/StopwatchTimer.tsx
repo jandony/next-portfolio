@@ -6,7 +6,7 @@ import { useState, useRef } from "react";
 export default function StopwatchTimer() {
     const [time, setTime] = useState(0);
     const [isRunning, setIsRunning] = useState(false);
-    const intervalRef = useRef(0);
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
     const start = () => {
         if (!isRunning) {
@@ -18,14 +18,16 @@ export default function StopwatchTimer() {
     };
 
     const stop = () => {
-        if (isRunning) {
+        if (isRunning && intervalRef.current) {
             clearInterval(intervalRef.current);
             setIsRunning(false);
         }
     };
 
     const reset = () => {
-        clearInterval(intervalRef.current);
+        if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+        }
         setIsRunning(false);
         setTime(0);
     };
