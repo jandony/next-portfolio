@@ -3,6 +3,10 @@
 // Imports
 // import { useEffect, useState } from "react";
 // import { usePathname } from "next/navigation";
+
+import { GiHook } from "react-icons/gi";
+import { SiRedux } from "react-icons/si";
+
 import ShoppingCart from "@/components/lessons/ShoppingCart";
 import WizardStepper from "@/components/lessons/WizardStepper";
 import FocusInput from "@/components/lessons/FocusInput";
@@ -12,6 +16,8 @@ import Typography from "@/components/lessons/Typography";
 import Performance from "@/components/lessons/Performance";
 import Redux from "@/components/lessons/Redux";
 import ReactHookForm from "@/components/lessons/ReactHookForm";
+import StopwatchTimer from "@/components/lessons/StopwatchTimer";
+import ImageCarousel from "@/components/lessons/ImageCarousel";
 
 export default function Home() {
     // const domain = "https://reactwp.jeffandony.com";
@@ -55,14 +61,26 @@ export default function Home() {
     return (
         <main className="flex flex-col gap-4 p-6">
             <div className="flex flex-col gap-6">
-                <ReactHookForm />
-                {/* <FocusInput />
-                <PrevCount />
-                <ToggleVisibility />
-                <ShoppingCart />
-                <WizardStepper /> */}
+                {/* <ReactHookForm /> */}
+                {/* <PrevCount /> */}
+                {/* <ToggleVisibility /> */}
+                {/* <WizardStepper /> */}
                 {/* <Performance /> */}
                 {/* <Redux /> */}
+
+                {/* --- REF HOOK */}
+                <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"> <GiHook /> REF HOOK</h2>
+                <FocusInput />
+                <StopwatchTimer />
+                <ImageCarousel />
+                {/* VideoPlayer */}
+
+                {/* --- REDUX TOOLKIT ---- */}
+                <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"><SiRedux /> REDUX TOOLKIT</h2>
+                <ShoppingCart />
+                {/* ToDoList */}
+                {/* Recipe Manager */}
+                {/* Search App */}
             </div>
         </main>
     );
