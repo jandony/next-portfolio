@@ -19,6 +19,7 @@ import ReactHookForm from "@/components/lessons/ReactHookForm";
 import StopwatchTimer from "@/components/lessons/StopwatchTimer";
 import ImageCarousel from "@/components/lessons/ImageCarousel";
 import VideoPlayer from "@/components/lessons/VideoPlayer";
+import ToDoList from "@/components/lessons/ToDoList";
 
 export default function Home() {
     // const domain = "https://reactwp.jeffandony.com";
@@ -62,26 +63,26 @@ export default function Home() {
     return (
         <main className="flex flex-col gap-4 p-6">
             <div className="flex flex-col gap-6">
-                {/* <ReactHookForm /> */}
-                {/* <PrevCount /> */}
-                {/* <ToggleVisibility /> */}
-                {/* <WizardStepper /> */}
-                {/* <Performance /> */}
-                {/* <Redux /> */}
+                {/* <ReactHookForm />
+                <PrevCount />
+                <ToggleVisibility />
+                <WizardStepper />
+                <Performance /> */}
 
                 {/* --- REF HOOK */}
-                <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"> <GiHook /> REF HOOK</h2>
+                {/* <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"> <GiHook /> REF HOOK</h2>
                 <FocusInput />
                 <StopwatchTimer />
                 <ImageCarousel />
-                <VideoPlayer />
+                <VideoPlayer /> */}
 
                 {/* --- REDUX TOOLKIT ---- */}
                 <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"><SiRedux /> REDUX TOOLKIT</h2>
                 <ShoppingCart />
-                {/* ToDoList */}
+                <ToDoList />
                 {/* Recipe Manager */}
                 {/* Search App */}
+                {/* <Redux /> */}
             </div>
         </main>
     );
