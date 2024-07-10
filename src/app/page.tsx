@@ -20,6 +20,7 @@ import StopwatchTimer from "@/components/lessons/StopwatchTimer";
 import ImageCarousel from "@/components/lessons/ImageCarousel";
 import VideoPlayer from "@/components/lessons/VideoPlayer";
 import ToDoList from "@/components/lessons/ToDoList";
+import RecipeManager from "@/components/lessons/RecipeManager";
 
 export default function Home() {
     // const domain = "https://reactwp.jeffandony.com";
@@ -78,9 +79,9 @@ export default function Home() {
 
                 {/* --- REDUX TOOLKIT ---- */}
                 <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"><SiRedux /> REDUX TOOLKIT</h2>
-                <ShoppingCart />
-                <ToDoList />
-                {/* Recipe Manager */}
+                {/* <ShoppingCart /> */}
+                {/* <ToDoList /> */}
+                <RecipeManager />
                 {/* Search App */}
                 {/* <Redux /> */}
             </div>
