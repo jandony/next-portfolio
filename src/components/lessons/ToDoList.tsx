@@ -35,8 +35,10 @@ export default function ToDoList() {
 
     return (
         <div className="flex flex-col gap-2 border p-8">
-            <h3 className="text-3xl text-white">ToDo List</h3>
-            <p>(Redux Toolkit)</p>
+            <div>
+                <h3 className="text-3xl text-white py-2">ToDo List</h3>
+                <p>(Redux Toolkit)</p>
+            </div>
 
             <div className="flex gap-4">
                 <div className="grid grid-cols-2 items-start gap-4 w-full p-4">
@@ -70,6 +72,15 @@ export default function ToDoList() {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className="border-t border-white/25 py-4">
+                <h4 className="text-xl text-white py-2">What I Learned:</h4>
+                <ul className="list-disc px-6">
+                    <li>CRUD operation using the Redux Toolkit</li>
+                    <li>Using form checks to see if an item already exists inside the state's array</li>
+                    <li>Simple form validation with error handling messages</li>
+                </ul>
             </div>
         </div>
     )

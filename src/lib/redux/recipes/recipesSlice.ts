@@ -197,7 +197,6 @@ const recipesSlice = createSlice({
                 state.searchResults = filteredRecipes;
                 state.searchPerformed = true;
             }
-
         }
     },
 });

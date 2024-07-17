@@ -58,9 +58,11 @@ export default function RHFRegistrationForm() {
     }
 
     return (
-        <div className="flex flex-col justify-center gap-2 my-2 border p-8">
-            <h3 className="text-3xl text-white">Advanced Registration Form</h3>
-            <label className="w-full">Lesson: Learn React Form Hook basics, Zod validations, and error handling</label>
+        <div className="flex flex-col justify-center gap-6 my-2 border p-8">
+            <div>
+                <h3 className="text-3xl text-white py-2">Advanced Registration Form</h3>
+                <label className="w-full">Lesson: Learn React Form Hook basics, Zod validations, and error handling</label>
+            </div>
 
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col justify-center space-y-4 w-full max-w-[720px] min-h-[500px] mx-auto bg-slate-800 p-10 mt-6">
@@ -136,6 +138,14 @@ export default function RHFRegistrationForm() {
                     <Button type="submit" className="bg-blue-800 hover:bg-blue-700">Submit</Button>
                 </form>
             </Form>
+            <div className="border-t border-white/25 py-4">
+                <h4 className="text-xl text-white py-2">What I Learned:</h4>
+                <ul className="list-disc px-6">
+                    <li>React Form Hooks are used with Zod for form validations and error handling</li>
+                    <li>Zod handles the majority of the validations and error messages.</li>
+                    <li>Shadcn uses controlled form fields where the field values are driven by the state. This is important because it allows for one-way data flow, where React components manages the state of the form fields.</li>
+                </ul>
+            </div>
         </div>
     )
 }

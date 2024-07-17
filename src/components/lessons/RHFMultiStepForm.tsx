@@ -265,9 +265,11 @@ export default function RHFMultiStepForm() {
     }
 
     return (
-        <div className="flex flex-col justify-center gap-2 my-2 border p-8">
-            <h3 className="text-3xl text-white">Multi-Step Form</h3>
-            <label className="w-full">Lesson: Learn React Form Hook basics, Zod validations, and error handling</label>
+        <div className="flex flex-col justify-center gap-4 my-2 border p-8">
+            <div>
+                <h3 className="text-3xl text-white py-2">Multi-Step Form</h3>
+                <label className="w-full">Lesson: Learn React Form Hook basics, Zod validations, and error handling</label>
+            </div>
 
             <Form {...form}>
                 <form onSubmit={form.handleSubmit((data) => onSubmit({ ...data, age: Number(data.age), experience: Number(data.experience) }))} className="flex flex-col gap-6 justify-start w-full max-w-[720px] min-h-[500px] mx-auto bg-slate-800 rounded-lg p-10 mt-6">
@@ -452,6 +454,15 @@ export default function RHFMultiStepForm() {
                     </div>
                 </form>
             </Form>
+
+            <div className="border-t border-white/25 py-4">
+                <h4 className="text-xl text-white py-2">What I Learned:</h4>
+                <ul className="list-disc px-6">
+                    <li>Numbers should always be converted as a number format. Otherwise, by default numbers are validated as string values.</li>
+                    <li>The useRef hook can be used to calculate dimensions of a DOM element. Similar to using the QuerySelector method.</li>
+                    <li>Zod's validation schema can be broken up for each form step.</li>
+                </ul>
+            </div>
         </div>
     )
 }

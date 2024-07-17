@@ -68,14 +68,6 @@ export default function Home() {
     return (
         <main className="flex flex-col gap-4 p-6">
             <div className="flex flex-col gap-6">
-                {/* <RHFBasics /> */}
-                {/* <PrevCount /> */}
-                {/* <ToggleVisibility /> */}
-                {/* <WizardStepper /> */}
-                {/* <Performance /> */}
-
-
-
                 {/* --- REF HOOK */}
                 {/* <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"> <GiHook /> REF HOOK</h2>
                 <FocusInput />
@@ -88,12 +80,20 @@ export default function Home() {
                 <ShoppingCart />
                 <ToDoList />
                 <RecipeManager /> */}
-                {/* <Redux /> */}
 
-                <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"><LuClipboardList /> REACT HOOK FORMS</h2>
-                {/* <RHFRegistrationForm /> */}
-                <RHFMultiStepForm />
+                {/* <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"><LuClipboardList /> REACT HOOK FORMS</h2>
+                <RHFRegistrationForm />
+                <RHFMultiStepForm /> */}
+
+                {/* <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"><LuClipboardList /> OTHER WORK</h2>
+                {/* <RHFBasics /> */}
+                {/* <PrevCount /> */}
+                {/* <ToggleVisibility /> */}
+                {/* <WizardStepper /> */}
+                {/* <Performance /> */}
+                {/* <Redux /> */}
                 {/* <RHFDynamicFormBuilder /> */}
+
             </div>
         </main>
     );

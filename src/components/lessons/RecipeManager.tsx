@@ -35,14 +35,13 @@ export default function RecipeManager() {
     const searchPerformed = useSelector((state: RootState) => state.recipes.searchPerformed);
 
     const dispatch = useDispatch<AppDispatch>();
-
+  
     // Initial variables
     const initialID = recipes.length > 0 ? recipes.length : 0;
     const recipeIDRef = useRef(initialID);
 
     // Search variables
     const [searchValue, setSearchValue] = useState('');
-    const [searchCategory, setSearchCategory] = useState('');
     const recipesToRender = searchResults.length > 0 || searchPerformed ? searchResults : recipes;
 
     // Recipe object
@@ -53,11 +52,11 @@ export default function RecipeManager() {
         category: '',
         steps: [''],
     });
-
+  
     // Action states
     const [isEditing, setEditing] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
-
+    
     // Recipe Card Functions
     const handleRecipeCategory = (value: string) => {
         setNewRecipe((prevRecipe) => ({
@@ -97,6 +96,7 @@ export default function RecipeManager() {
             steps: newSteps
         });
     };
+
     const getCategoryClass = (category: string) => {
         switch (category) {
             case 'breakfast':
@@ -201,8 +201,10 @@ export default function RecipeManager() {
 
     return (
         <div className="flex flex-col gap-2 border p-8">
-            <h3 className="text-3xl text-white">Recipe Manager</h3>
-            <p>(Redux Toolkit)</p>
+            <div>
+                <h3 className="text-3xl text-white py-2">Recipe Manager</h3>
+                <p>(Redux Toolkit)</p>
+            </div>
 
             <div className="flex flex-col gap-4">
                 <div className="w-full container p-4">
@@ -314,6 +316,15 @@ export default function RecipeManager() {
                     )}
                 </div>
 
+            </div>
+
+            <div className="border-t border-white/25 py-4">
+                <h4 className="text-xl text-white py-2">What I Learned:</h4>
+                <ul className="list-disc px-6">
+                    <li>A Redux slice can be used to create reducers that perform add, remove, update, reset, and search functionalities</li>
+                    <li>Action payloads can be used to pass data between the reducer functions and react components</li>
+                    <li>Functions can be used to output css classes. In this example, I used the recipe category to determine how to style each recipe cards.</li>
+                </ul>
             </div>
         </div>
     )

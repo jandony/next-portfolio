@@ -29,17 +29,19 @@ export default function ImageCarousel() {
         );
     };
 
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         nextImage();
-    //     }, 3000); // Change image every 3 seconds
-    //     return () => clearInterval(interval);
-    // }, []);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            nextImage();
+        }, 3000); // Change image every 3 seconds
+        return () => clearInterval(interval);
+    }, []);
 
     return (
-        <div className="flex flex-wrap gap-2 border p-8">
-            <h3 className="text-3xl text-white">Image Carousel</h3>
-            <label className="w-full">Lesson: DOM Minipulation, managing transitions, animations, and auto-play features.</label>
+        <div className="flex flex-wrap gap-6 border p-8">
+            <div>
+                <h3 className="text-3xl text-white py-2">Image Carousel</h3>
+                <label className="w-full">Lesson: DOM Minipulation, managing transitions, animations, and auto-play features.</label>
+            </div>
 
             <div className="border-2 border-gray-600 w-full relative overflow-hidden">
                 <div className="flex relative w-full aspect-video" ref={carouselRef}>
@@ -52,6 +54,14 @@ export default function ImageCarousel() {
                 </div>
             </div>
 
+            <div className="border-t border-white/25 py-4">
+                <h4 className="text-xl text-white py-2">What I Learned:</h4>
+                <ul className="list-disc px-6">
+                    <li>The setInterval function can be used to create an auto-play feature</li>
+                    <li>Instead of using .map(), you can add custom logic to the index of the array and use the Ref hook to reference the div container.</li>
+                    <li>The setTimeout function and intervals can be used in combination of Tailwind CSS for accurately timed transitions.</li>
+                </ul>
+            </div>
         </div>
     )
 }

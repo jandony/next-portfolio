@@ -51,8 +51,10 @@ export default function VideoPlayer() {
 
     return (
         <div className="flex flex-col justify-center gap-2 my-2 border p-8">
-            <h3 className="text-3xl text-white">Video Player</h3>
-            <label className="w-full">Lesson: Custom video player with play, pause, and seek controls.</label>
+            <div>
+                <h3 className="text-3xl text-white py-2">Video Player</h3>
+                <label className="w-full">Lesson: Custom video player with play, pause, and seek controls.</label>
+            </div>
 
             <div className="relative">
                 <div className="absolute top-0 left-0 h-full w-full bg-transparent"></div>
@@ -63,6 +65,15 @@ export default function VideoPlayer() {
                 <button onClick={play} className="px-4 py-2 cursor-pointer text-white rounded-lg bg-green-700 hover:bg-green-800">Play</button>
                 <button onClick={pause} className="px-4 py-2 cursor-pointer text-white rounded-lg bg-red-700 hover:bg-red-800">Pause</button>
                 <button onClick={restart} className="px-4 py-2 cursor-pointer text-white rounded-lg bg-yellow-700 hover:bg-yellow-800">Restart</button>
+            </div>
+
+            <div className="border-t border-white/25 py-4">
+                <h4 className="text-xl text-white py-2">What I Learned:</h4>
+                <ul className="list-disc px-6">
+                    <li>The useRef hook can be used to target specific elements in the DOM</li>
+                    <li>The window.onYouTubeIframeAPIReady function can be used to dynamically embedd YouTube videos in the DOM</li>
+                    <li>Customized controls can be created to improve accessibility</li>
+                </ul>
             </div>
         </div>
     )
