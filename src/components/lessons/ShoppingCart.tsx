@@ -78,7 +78,7 @@ export default function ShoppingCart() {
     return (
         <div className="flex flex-col gap-2 border p-8">
             <h3 className="text-3xl text-white">Shopping Cart</h3>
-            <p>(useReducer hook)</p>
+            <label className="w-full">Lesson: Custom video player with play, pause, and seek controls.</label>
 
             <div className="flex gap-4">
                 <div className="grid grid-cols-2 items-start gap-4 w-full p-4">

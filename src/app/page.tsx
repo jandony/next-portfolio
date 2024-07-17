@@ -6,6 +6,7 @@
 
 import { GiHook } from "react-icons/gi";
 import { SiRedux } from "react-icons/si";
+import { LuClipboardList } from "react-icons/lu";
 
 import ShoppingCart from "@/components/lessons/ShoppingCart";
 import WizardStepper from "@/components/lessons/WizardStepper";
@@ -15,12 +16,15 @@ import ToggleVisibility from "@/components/lessons/ToggleVisibility";
 import Typography from "@/components/lessons/Typography";
 import Performance from "@/components/lessons/Performance";
 import Redux from "@/components/lessons/Redux";
-import ReactHookForm from "@/components/lessons/ReactHookForm";
+import RHFBasics from "@/components/lessons/RHFBasics";
 import StopwatchTimer from "@/components/lessons/StopwatchTimer";
 import ImageCarousel from "@/components/lessons/ImageCarousel";
 import VideoPlayer from "@/components/lessons/VideoPlayer";
 import ToDoList from "@/components/lessons/ToDoList";
 import RecipeManager from "@/components/lessons/RecipeManager";
+import RHFRegistrationForm from "@/components/lessons/RHFRegistrationForm";
+import RHFDynamicFormBuilder from "@/components/lessons/RHFDynamicFormBuilder";
+import RHFMultiStepForm from "@/components/lessons/RHFMultiStepForm";
 
 export default function Home() {
     // const domain = "https://reactwp.jeffandony.com";
@@ -64,11 +68,13 @@ export default function Home() {
     return (
         <main className="flex flex-col gap-4 p-6">
             <div className="flex flex-col gap-6">
-                {/* <ReactHookForm />
-                <PrevCount />
-                <ToggleVisibility />
-                <WizardStepper />
-                <Performance /> */}
+                {/* <RHFBasics /> */}
+                {/* <PrevCount /> */}
+                {/* <ToggleVisibility /> */}
+                {/* <WizardStepper /> */}
+                {/* <Performance /> */}
+
+
 
                 {/* --- REF HOOK */}
                 {/* <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"> <GiHook /> REF HOOK</h2>
@@ -78,12 +84,16 @@ export default function Home() {
                 <VideoPlayer /> */}
 
                 {/* --- REDUX TOOLKIT ---- */}
-                <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"><SiRedux /> REDUX TOOLKIT</h2>
-                {/* <ShoppingCart /> */}
-                {/* <ToDoList /> */}
-                <RecipeManager />
-                {/* Search App */}
+                {/* <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"><SiRedux /> REDUX TOOLKIT</h2>
+                <ShoppingCart />
+                <ToDoList />
+                <RecipeManager /> */}
                 {/* <Redux /> */}
+
+                <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"><LuClipboardList /> REACT HOOK FORMS</h2>
+                {/* <RHFRegistrationForm /> */}
+                <RHFMultiStepForm />
+                {/* <RHFDynamicFormBuilder /> */}
             </div>
         </main>
     );
