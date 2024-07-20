@@ -87,7 +87,7 @@ export default function Header() {
     ]
 
     return (
-        <header className="bg-slate-800 text-white sticky top-0 z-50 shadow-lg">
+        <header className="bg-slate-800 text-white sticky top-0 z-20 shadow-lg">
             <div className="flex items-center justify-between gap-4 container relative">
                 <div className="flex items-center h-full">
                     <p className="text-3xl">Logo</p>

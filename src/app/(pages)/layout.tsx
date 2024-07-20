@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import Loading from "./loading"
+import Loading from "../loading"
 
 export default function BlogLayout({
     children, // will be a page or nested layout

@@ -22,8 +22,8 @@ export default function RootLayout({
             <body className={`${inter.className} bg-slate-900 text-white/50`}>
                 <ReduxProvider>
                     <Header />
-                    <div className="relative min-h-screen">
-                        <div className="relative container min-h-screen z-10">
+                    <div className="relative">
+                        <div className="relative container z-10">
                             {children}
                         </div>
                     </div>

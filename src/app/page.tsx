@@ -25,6 +25,8 @@ import RecipeManager from "@/components/lessons/RecipeManager";
 import RHFRegistrationForm from "@/components/lessons/RHFRegistrationForm";
 import RHFDynamicFormBuilder from "@/components/lessons/RHFDynamicFormBuilder";
 import RHFMultiStepForm from "@/components/lessons/RHFMultiStepForm";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export default function Home() {
     // const domain = "https://reactwp.jeffandony.com";
@@ -68,32 +70,37 @@ export default function Home() {
     return (
         <main className="flex flex-col gap-4 p-6">
             <div className="flex flex-col gap-6">
-                {/* --- REF HOOK */}
-                {/* <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"> <GiHook /> REF HOOK</h2>
-                <FocusInput />
-                <StopwatchTimer />
-                <ImageCarousel />
-                <VideoPlayer /> */}
+                <Suspense fallback={<Loading />}>
 
-                {/* --- REDUX TOOLKIT ---- */}
-                {/* <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"><SiRedux /> REDUX TOOLKIT</h2>
-                <ShoppingCart />
-                <ToDoList />
-                <RecipeManager /> */}
+                    <h1 className="text-5xl font-semibold text-white">Home page</h1>
 
-                {/* <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"><LuClipboardList /> REACT HOOK FORMS</h2>
-                <RHFRegistrationForm />
-                <RHFMultiStepForm /> */}
+                    {/* --- REF HOOK */}
+                    {/* <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"> <GiHook /> REF HOOK</h2>
+                    <FocusInput />
+                    <StopwatchTimer />
+                    <ImageCarousel />
+                    <VideoPlayer /> */}
 
-                {/* <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"><LuClipboardList /> OTHER WORK</h2>
-                {/* <RHFBasics /> */}
-                {/* <PrevCount /> */}
-                {/* <ToggleVisibility /> */}
-                {/* <WizardStepper /> */}
-                {/* <Performance /> */}
-                {/* <Redux /> */}
-                {/* <RHFDynamicFormBuilder /> */}
+                    {/* --- REDUX TOOLKIT ---- */}
+                    {/* <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"><SiRedux /> REDUX TOOLKIT</h2>
+                    <ShoppingCart />
+                    <ToDoList />
+                    <RecipeManager /> */}
 
+                    {/* <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"><LuClipboardList /> REACT HOOK FORMS</h2>
+                    <RHFRegistrationForm />
+                    <RHFMultiStepForm /> */}
+
+                    {/* <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"><LuClipboardList /> OTHER WORK</h2> */}
+                    {/* <RHFBasics /> */}
+                    {/* <PrevCount /> */}
+                    {/* <ToggleVisibility /> */}
+                    {/* <WizardStepper /> */}
+                    {/* <Performance /> */}
+                    {/* <Redux /> */}
+                    {/* <RHFDynamicFormBuilder /> */}
+
+                </Suspense>
             </div>
         </main>
     );
