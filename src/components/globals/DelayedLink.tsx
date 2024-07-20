@@ -33,6 +33,7 @@ const DelayedLink: React.FC<DelayedLinkProps> = ({ href, className, children }) 
         setIsClicked(true);
         setTimeout(() => {
             setIsTransitioning(false);
+            setIsClicked(false);
         }, 3000);
     };
 
