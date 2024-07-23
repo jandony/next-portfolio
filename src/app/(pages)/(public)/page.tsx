@@ -26,7 +26,9 @@ import RHFRegistrationForm from "@/components/lessons/RHFRegistrationForm";
 import RHFDynamicFormBuilder from "@/components/lessons/RHFDynamicFormBuilder";
 import RHFMultiStepForm from "@/components/lessons/RHFMultiStepForm";
 import { Suspense } from "react";
-import Loading from "./loading";
+import Loading from "../../loading";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
     // const domain = "https://reactwp.jeffandony.com";
@@ -68,11 +70,25 @@ export default function Home() {
     // console.log(pathname);
 
     return (
-        <main className="flex flex-col gap-4 p-6">
+        <main className="flex flex-col gap-4">
             <div className="flex flex-col gap-6">
                 <Suspense fallback={<Loading />}>
 
-                    <h1 className="text-5xl font-semibold text-white">Home page</h1>
+                    {/* Hero */}
+                    <div className="flex flex-col bg-[url('https://images.unsplash.com/photo-1561736778-92e52a7769ef')] bg-center bg-no-repeat bg-cover py-[100px] relative z-0">
+                        <div className="overlay absolute top-0 left-0 h-full w-full bg-black/90 backdrop-blur-md"></div>
+                        <div className="flex flex-col flex-grow container z-10">
+                            <div className="grid grid-cols-2 gap-10 h-full w-full">
+                                <div className="flex flex-col justify-center gap-6">
+                                    <h1 className="h-fit text-5xl font-semibold text-white">Welcome to the <br />Home page</h1>
+                                    <p className="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <Button className="w-fit bg-blue-800 hover:bg-blue-700">Click Me</Button>
+                                </div>
+                                <Image src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853" alt="hero image" height={600} width={600} className="h-[500px] w-[500px] object-cover border-8" />
+                            </div>
+                        </div>
+                    </div>
+                    {/* End Hero */}
 
                     {/* --- REF HOOK */}
                     {/* <h2 className="flex items-center gap-2 mt-6 text-white text-4xl font-semibold"> <GiHook /> REF HOOK</h2>

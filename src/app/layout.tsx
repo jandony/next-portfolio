@@ -4,6 +4,9 @@ import "./globals.css";
 // import LeftSidebar from "@/components/globals/left-sidebar";
 import Header from "@/components/globals/header";
 import ReduxProvider from "@/app/ReduxProvider";
+import { TransitionProvider } from "./context/TransitionContext";
+import Overlay from "@/components/globals/Overlay";
+import Footer from "@/components/globals/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,15 +22,19 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.className} bg-slate-900 text-white/50`}>
-                <ReduxProvider>
-                    <Header />
-                    <div className="relative">
-                        <div className="relative container z-10">
-                            {children}
+            <body className={`${inter.className} flex flex-col bg-slate-900 text-white/50 min-h-screen`}>
+                <TransitionProvider>
+                    <ReduxProvider>
+                        <Header />
+                        <div className="relative top-0 left-0 flex flex-col w-full z-auto">
+                            <Overlay />
+                            <div className="block relative">
+                                {children}
+                            </div>
                         </div>
-                    </div>
-                </ReduxProvider>
+                        <Footer />
+                    </ReduxProvider>
+                </TransitionProvider>
             </body>
         </html>
     );
